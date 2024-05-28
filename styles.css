@@ -1,0 +1,714 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --sm-spacing: 15px;
+    --md-spacing: 30px;
+    --lg-spacing: 50px;
+    --xl-spacing: 80px;
+    --primary-color: #fb663a;
+    --secondary-color: #0d162b;
+    --third-color: #fbaa3a;
+}
+
+.section-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 12px;
+}
+
+/*NAVIGATION BAR STYLE*/
+
+/*************** NAVIGATION BAR *****************/
+nav {
+    display: flex;
+    /* padding: 35px; */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 89%;
+    margin: auto;
+    column-gap: 27px;
+    height: 20vh;
+}
+
+ul {
+    display: flex;
+    column-gap: 92px;
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+ul a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.ul-list a:hover {
+    color: #518581;
+}
+
+.nav-btns {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.menu-btns {
+    display: none;
+}
+
+.menu-btns > img:nth-of-type(1){
+    padding-right: 10px;
+}
+
+.nav-btns-w-search {
+    display: flex;
+    align-items: center;
+    column-gap: 21px;
+}
+
+button[name="login"] {
+    background-color: inherit;
+    padding: 15px;
+    width: 77px;
+    border-style: none;
+    font-size: 17px;
+}
+
+button[name="start"] {
+    padding: 11px;
+    width: 128px;
+    border-style: none;
+    font-size: 16px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 9px;
+}
+
+img[alt="menu-burger"] {
+    display: none;
+}
+
+
+/* nav media query */
+
+@media screen and (max-width: 1200px) and (min-width:992px) {
+
+    ul {
+        flex-direction: column;
+    }
+
+    .ul-list {
+        display: none;
+        position: absolute;
+        top: 85px;
+        right: 7px;
+        border: 5px solid white;
+        background-color: #fbaa3a;
+        color: white;
+        font-size: 22px;
+        z-index: 2;
+        text-align: center;
+        border-radius: 23px;
+        padding: 35px;
+    }
+
+    ul a {
+        color: white;
+    }
+
+    ul a:hover {
+        color: white;
+    }
+    .ul-list a:hover {
+        color: white;
+    }
+
+
+    .ul-list li {
+        padding-bottom: 22px;
+    }
+
+    img[alt="menu-burger"] {
+        display: block;
+    }
+
+    nav {
+        padding: 32px;
+        height: 21vh;
+    }
+
+    .nav-btns {
+        display: none;
+    }
+
+    button[name="login"] {
+        color: white;
+    }
+
+    .menu-btns {
+        display: block;
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+
+}
+
+@media screen and (max-width: 992px) and (min-width:786px) {
+    ul {
+        flex-direction: column;
+    }
+
+    ul a {
+        color: white;
+    }
+
+    .ul-list a:hover {
+        color: white;
+    }
+
+
+    .ul-list {
+        display: none;
+        position: absolute;
+        top: 85px;
+        right: 7px;
+        border: 5px solid white;
+        background-color: #fbaa3a;
+        color: white;
+        font-size: 22px;
+        z-index: 2;
+        text-align: center;
+        border-radius: 23px;
+        padding: 35px;
+    }
+
+    img[alt="menu-burger"] {
+        display: block;
+    }
+
+    .ul-list li {
+        padding-bottom: 22px;
+    }
+
+    nav {
+        padding: 32px;
+        height: 21vh;
+
+    }
+
+    .nav-btns {
+        display: none;
+    }
+
+    button[name="login"] {
+        color: white;
+    }
+
+    .menu-btns {
+        display: block;
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 786px) and (min-width:600px) {
+
+    ul {
+        flex-direction: column;
+    }
+
+    ul a {
+        color: white;
+    }
+
+    .ul-list a:hover {
+        color: white;
+    }  
+
+    .ul-list {
+        display: none;
+        position: absolute;
+        top: 85px;
+        right: 7px;
+        border: 5px solid white;
+        background-color: #fbaa3a;
+        color: white;
+        font-size: 22px;
+        z-index: 2;
+        text-align: center;
+        border-radius: 23px;
+        padding: 35px;
+    }
+
+    img[alt="menu-burger"] {
+        display: block;
+    }
+
+    .ul-list li {
+        padding-bottom: 22px;
+    }
+
+    nav {
+        padding: 32px;
+        height: 21vh;
+
+    }
+
+    .nav-btns {
+        display: none;
+    }
+
+    button[name="login"] {
+        color: white;
+    }
+
+
+    .menu-btns {
+        display: block;
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    ul {
+        flex-direction: column;
+    }
+
+    .ul-list a:hover {
+        color: white;
+    }
+
+    ul a {
+        color: white;
+    }
+
+
+    .ul-list {
+        display: none;
+        position: absolute;
+        top: 85px;
+        right: 7px;
+        border: 5px solid white;
+        background-color: #fbaa3a;
+        color: white;
+        font-size: 22px;
+        z-index: 2;
+        text-align: center;
+        border-radius: 23px;
+        padding: 35px;
+    }
+
+    img[alt="menu-burger"] {
+        display: block;
+    }
+
+    .ul-list li {
+        padding-bottom: 22px;
+    }
+
+    nav {
+        padding: 32px;
+        height: 21vh;
+
+    }
+
+    .nav-btns {
+        display: none;
+    }
+
+    button[name="login"] {
+        color: white;
+    }
+
+    .menu-btns {
+        display: block;
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+
+img[alt="nouh-logo"]{
+    width: 164px;
+    height: 166px;}
+
+.btn {
+    padding: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+
+.btn:hover {
+    background-color: white;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+
+.main-background {
+    background-image: url("main-bg-scaled.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wer-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+
+.main-background .section-container {
+    color: white;
+    filter: drop-shadow(2px 4px 6px black);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.wer-background .section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    padding: var(--lg-spacing) 0 var(--lg-spacing) 0;
+    color: white;
+    padding: 16px;
+
+}
+
+.wer-background .section-container>div {
+    width: 49%;
+}
+
+.bg-text {
+    width: 80%;
+}
+
+.bg-text h1 {
+    font-size: 45px;
+}
+
+.bg-text p {
+    margin: var(--sm-spacing) 0 var(--sm-spacing) 0;
+}
+
+.jet-btn {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    font-size: 18px;
+    border: 3px ridge white;
+    margin: var(--md-spacing) 0 var(--md-spacing) 0;
+}
+
+img[alt="about"] {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.21);
+}
+
+/* Wer Bg Media Query */
+
+@media screen and (max-width: 1200px) and (min-width:992px) {
+    .wer-background .section-container>div {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 992px) and (min-width:786px) {
+    .wer-background .section-container>div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 786px) and (min-width:600px) {
+    .wer-background .section-container>div {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .wer-background .section-container>div {
+        width: 100%;
+    }
+
+
+}
+
+img[alt="service"]{
+    width: 100%;
+}
+
+.unsere .section-container {
+    text-align: center;
+}
+
+.card-body{
+    padding: var(--md-spacing) var(--sm-spacing) var(--md-spacing) var(--sm-spacing);
+}
+
+.unsere-cards {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 18px;
+    margin-bottom: 25px;
+}
+
+.unsere-cards>.card {
+    width: 32%;
+}
+
+.unsere-desc {
+    margin: var(--md-spacing) 0 var(--md-spacing) 0;
+}
+
+.unsere-desc h1,
+h2,
+p {
+    margin: var(--sm-spacing) 0 var(--sm-spacing) 0;
+}
+
+.kontakt {
+    margin: var(--md-spacing) 0 var(--md-spacing) 0;
+}
+
+.sie-bg {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--lg-spacing) 0 var(--lg-spacing) 0;
+}
+
+.sie-bg h3 {
+    color: white;
+    margin: var(--md-spacing) 0 var(--md-spacing) 0;
+}
+
+.sie-btn {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    font-size: 18px;
+    border: 3px ridge white;
+}
+
+form input {
+    margin: var(--sm-spacing) 0 var(--sm-spacing) 0;
+    padding-left: 10px;
+    
+}
+
+form input:nth-child(1), input:nth-child(2), input:nth-child(3){
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+}
+
+form textarea {
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+
+}
+
+.chk-box-div {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+footer .section-container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: var(--lg-spacing) var(--sm-spacing) var(--lg-spacing) var(--sm-spacing);
+}
+
+footer .section-container > div:nth-child(1){
+    width: 30%;
+}
+
+footer .section-container > div:nth-child(3){
+    width: 35%;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    padding: var(--sm-spacing) 0 var(--sm-spacing) 0;
+}
+
+.footer-btn {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    border: 3px ridge white;
+}
+
+.wer-bg{
+    width: 45%;
+}
+
+/* Footer media query */
+
+@media screen and (max-width: 1200px) and (min-width:992px) {
+    .unsere-cards>.card {
+        width: 47%;
+    }
+    .unsere-cards{
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    form textarea{
+        width: 100%;
+    }
+    footer .section-container > div:nth-child(1){
+        width: 100%;
+    }
+    footer .section-container > div:nth-child(3){
+        width: 100%;
+    }
+    .section-container{
+        width: 100%;
+    }
+    .main-background{
+        height: auto;
+    }
+    .bg-text h1{
+        font-size: 30px;
+    }
+    .bg-text{
+        width: 100%;
+    }
+   
+}
+
+@media screen and (max-width: 992px) and (min-width:786px) {
+    .unsere-cards>.card {
+        width: 100%;
+    }
+    .unsere-cards{
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    form textarea{
+        width: 100%;
+    }
+    footer .section-container > div:nth-child(1){
+        width: 100%;
+    }
+    footer .section-container > div:nth-child(3){
+        width: 100%;
+    }
+    .section-container{
+        width: 100%;
+    }
+    .main-background{
+        height: auto;
+    }
+    .bg-text h1{
+        font-size: 30px;
+    }
+    .bg-text{
+        width: 100%;
+    }
+   
+}
+
+@media screen and (max-width: 786px) and (min-width:600px) {
+    .unsere-cards>.card {
+        width: 100%;
+    }
+    .unsere-cards{
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    form textarea{
+        width: 100%;
+    }
+    footer .section-container > div:nth-child(1){
+        width: 100%;
+    }
+    footer .section-container > div:nth-child(3){
+        width: 100%;
+    }
+    .section-container{
+        width: 100%;
+    }
+    .main-background{
+        height: auto;
+    }
+    .bg-text h1{
+        font-size: 30px;
+    }
+    .bg-text{
+        width: 100%;
+    }
+   
+}
+
+@media screen and (max-width: 600px) {
+    .unsere-cards>.card {
+        width: 100%;
+    }
+    .unsere-cards{
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    form textarea{
+        width: 100%;
+    }
+    footer .section-container > div:nth-child(1){
+        width: 100%;
+    }
+    footer .section-container > div:nth-child(3){
+        width: 100%;
+    }
+    .section-container{
+        width: 100%;
+    }
+    .main-background{
+        height: auto;
+    }
+    .bg-text h1{
+        font-size: 30px;
+    }
+    .bg-text{
+        width: 100%;
+    }
+}
+
+
+.display{
+    display: block;
+}
